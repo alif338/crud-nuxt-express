@@ -1,8 +1,8 @@
 
-import * as getUserService from '../services/user/get'
-import * as putUserService from '../services/user/put'
-import * as postUserService from '../services/user/post'
-import * as deleteUserService from '../services/user/delete'
+const getUserService = require('../services/user/get')
+const putUserService = require('../services/user/put')
+const postUserService = require('../services/user/post')
+const deleteUserService = require('../services/user/delete')
 
 export const fetchUsers = async (req, res) => {
     try {

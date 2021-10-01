@@ -1,5 +1,5 @@
-import { Router } from "express"
-import * as userController from '../controllers/user'
+const {Router} = require("express")
+const userController = require('../controllers/user')
 const User = Router()
 
 User.get('/', userController.fetchUsers)
@@ -9,4 +9,4 @@ User.post('/', userController.createUser)
 User.put('/:id', userController.updateUser)
 User.delete('/:id', userController.deleteUser)
 
-export default User
+module.exports = User

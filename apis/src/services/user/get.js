@@ -1,7 +1,7 @@
-import {User} from "../../models/user"
+const {User} = require("../../models/user")
 
-export const all = async () => User.find({})
+exports.all = async () => User.find({})
 
-export const byId = async (id) => User.findById(id)
+exports.byId = async (id) => User.findById(id)
 
 

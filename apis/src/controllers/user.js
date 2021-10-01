@@ -4,7 +4,7 @@ const putUserService = require('../services/user/put')
 const postUserService = require('../services/user/post')
 const deleteUserService = require('../services/user/delete')
 
-export const fetchUsers = async (req, res) => {
+exports.fetchUsers = async (req, res) => {
     try {
         res.status(200).json((await getUserService.all()))
     } catch(e) {
@@ -12,7 +12,7 @@ export const fetchUsers = async (req, res) => {
     }
 }
 
-export const fetchUser = async (req, res) => {
+exports.fetchUser = async (req, res) => {
     try {
         res.status(200).json((await getUserService.byId(req.params.id)))
     } catch(e) {
@@ -20,7 +20,7 @@ export const fetchUser = async (req, res) => {
     }
 }
 
-export const createUser = async (req, res) => {
+exports.createUser = async (req, res) => {
     try {
         const {
             name, 
@@ -38,7 +38,7 @@ export const createUser = async (req, res) => {
     }
 }
 
-export const updateUser = async (req, res) => {
+exports.updateUser = async (req, res) => {
     try {
         const {
             name, 
@@ -56,7 +56,7 @@ export const updateUser = async (req, res) => {
     }
 }
 
-export const deleteUser = async (req, res) => {
+exports.deleteUser = async (req, res) => {
     try {
         res.status(200).json((await deleteUserService.byId(req.params.id)))
     } catch(e) {

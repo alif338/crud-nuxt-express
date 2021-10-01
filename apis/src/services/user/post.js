@@ -1,3 +1,3 @@
-import {User} from "../../models/user"
+const {User} = require("../../models/user")
 
-export const create = async (user) => User.create(user)
+exports.create = async (user) => User.create(user)

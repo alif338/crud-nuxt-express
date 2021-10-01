@@ -1,6 +1,6 @@
 const express = require('express')
 const cors = require('cors')
-const { User } = require('./src/routes/user')
+const User = require('./src/routes/user')
 require('./src/config') // Menginisiasi MongoDB di file config.js
 require('dotenv').config({path: `./${process.env.NODE_ENV}.env`})
 const app = express()

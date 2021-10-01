@@ -10,7 +10,7 @@ console.log(`./${process.env.NODE_ENV}.env`)
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(cors())
-app.use('/users', User)
+app.use('/', User)
 app.listen(process.env.PORT, () => {
     console.log(`App listening at http://127.0.0.1:${process.env.PORT}`)
 });

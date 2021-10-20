@@ -1,3 +1,3 @@
-import {User} from "../../models/user"
+const {User} = require("../../models/user")
 
-export const byId = async (id) => User.findByIdAndDelete(id)
+exports.byId = async (id) => User.findByIdAndDelete(id)  // built-in dari mongodb model
